@@ -1,0 +1,45 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+
+    --fuente-principal:3.8rem;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Krub', sans-serif;
+}
+body{
+    font-size: 16px; /* 1rem = 10px*/
+}
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+.contenedor {
+    width: 120rem;
+    margin: 0 auto; /* margin: top right bottom left O margin: top right*/
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegador-principal {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navegador-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+}
