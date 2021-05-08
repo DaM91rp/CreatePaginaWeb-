@@ -4,6 +4,7 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --grisClaro: #dfe9f3;
 
     --fuente-principal:3.8rem;
 }
@@ -19,20 +20,69 @@ html {
 body{
     font-size: 16px; /* 1rem = 10px*/
     font-family: 'Krub', sans-serif;
-}
-.titulo {
-    text-align: center;
-    font-size: 3.8rem;
-}
-
-.titulo span {
-    font-size: 2rem;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); /* Degradado del fondo de la pagina */
 }
 
 .contenedor {
     max-width: 120rem;
     margin: 0 auto; /* margin: top right bottom left O margin: top right*/
 }
+
+.sombra {
+    -webkit-box-shadow: 0px 5 px 15 px 0 px rgba(112,112,112,0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* TIPOGRQAFIAS */
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+/* TITULOS  */
+
+.titulo span {
+    font-size: 2rem;
+}
+
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem  3rem;
+    margin-top: 3rem;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
+
+/*  NAVEGACION PRINCIPAL */
 
 .nav-bg {
     background-color: var(--secundario);
@@ -65,10 +115,46 @@ body{
     color: var(--oscuro);
 }
 
+/* HERO */
+
 .hero {
     background-image: url(../img/sky.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
-    padding: 20px;
+    position: relative;
+    margin-bottom: 2rem;
 }
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0,0,0,.7);   /* Oscure un fondo */
+    /* background-color: rgb(0 0 0/ 70%); Opcion mas nueva*/
+    width: 100%;
+    height: 100%;
+
+    /* Alineart vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2, .contenido-hero p {
+    color: var(--blanco);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* SERVICIOS */
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3 1fr); /* Divide los servicios en 3 */
+    }
+}
+
